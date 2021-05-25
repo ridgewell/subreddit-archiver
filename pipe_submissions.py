@@ -89,7 +89,7 @@ def pipe_submissions(target):
                                 submission.distinguished,
                                 submission.is_self)
             cursor.execute(postgres_insert_query, record_to_insert)
-            print("Submission inserted. (ID: %s, Author: %s, Subreddit: %s" % (submission.id, submission.author, submission.subreddit.display_name))
+            print("Submission inserted. (ID: %s, Author: %s, Subreddit: %s)" % (submission.id, submission.author, submission.subreddit.display_name))
     except Exception as err:
         print("Error occurred:", err)
         print("Retrying in 5 minutes.")
